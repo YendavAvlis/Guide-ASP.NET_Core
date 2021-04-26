@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace my_book.Data.Models
@@ -17,9 +18,14 @@ namespace my_book.Data.Models
         public int? Rate { get; set; }
         public string Genre { get; set; }
         [MaxLength(60, ErrorMessage = "You cannot exceed 60 characters")]
-        public string Author { get; set; }
         public string CoverUrl { get; set; }
         public DateTime DateAdded { get; set; }
+
+        //Navigation Properties
+        public int PublisherId { get; set; }
+        public Publisher Publisher { get; set; }
+
+        public List<Book_Author> Book_Authors { get; set; }
 
     }
 }

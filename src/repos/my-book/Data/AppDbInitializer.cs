@@ -23,7 +23,6 @@ namespace my_book.Data
                         DateRead = DateTime.Now.AddDays(-10),
                         Rate = 10,
                         Genre = "Fiction",
-                        Author = "Da Silva",
                         CoverUrl = "I do not know",
                         DateAdded = DateTime.Now
 
@@ -34,7 +33,6 @@ namespace my_book.Data
                         Description = " 2nd Book Description",
                         IsRead = false,
                         Genre = "Fiction",
-                        Author = "Da Silva",
                         CoverUrl = "I do not know either.",
                         DateAdded = DateTime.Today
 
