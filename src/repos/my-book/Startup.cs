@@ -14,6 +14,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using my_book.Data;
 using my_book.Data.Models.Services;
+using my_book.Exceptions;
 
 namespace my_book
 {
@@ -59,6 +60,9 @@ namespace my_book
             app.UseRouting();
 
             app.UseAuthorization();
+            //Handling Exception
+            app.ConfigureBuiltInExceptionHandler();
+            //app.ConfigureCustomExceptionHandler();
 
             app.UseEndpoints(endpoints =>
             {
