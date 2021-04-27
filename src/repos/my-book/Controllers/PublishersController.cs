@@ -35,13 +35,18 @@ namespace my_book.Controllers
             return Ok("The Publisher was added successfully!!");
         }
 
-        /*
-        [HttpPut("{id}")]
-        public IActionResult UpdateAuthorById(int id, [FromBody] AuthorVM author)
+        [HttpGet("{id}")]
+        public IActionResult GetPublisherData(int id)
         {
-            var updatedAuthor = _authorService.UpdatedAuthorById(id, author);
-            return Ok(updatedAuthor);
+            var _response = _publisherService.GetPublisherData(id);
+            return Ok(_response);
         }
-        */
+
+        [HttpDelete("{id}")]
+        public IActionResult DeletePublisherById(int id)
+        {
+            _publisherService.DeletePublisherById(id);
+            return Ok("The publisher was successfully Deleted!!");
+        }
     }
 }
