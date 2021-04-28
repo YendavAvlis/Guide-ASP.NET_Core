@@ -16,21 +16,21 @@ namespace my_book.Controllers
         {
             _publisherService = publisherService;
         }
-        /*
-        [HttpGet]
-        public IActionResult GetAllAuthors()
+
+        [HttpGet("get-all-publishers")]
+        public IActionResult GetAllPublishers(string sortBy, string searchString, int pageNumber)
         {
-            var allAuthors = _authorService.GetAllAuthors();
-            return Ok(allAuthors);
+            try
+            {
+                var _result = _publisherService.GetAllPublishers(sortBy, searchString, pageNumber);
+                return Ok(_result);
+            }
+            catch (Exception)
+            {
+                return BadRequest("Sorry, we could not load the publisher");
+            }
         }
 
-        [HttpGet("{id}")]
-        public IActionResult GetAuthorById(int id)
-        {
-            var allAuthors = _authorService.GetAuthorById(id);
-            return Ok(allAuthors);
-        }
-            */
         [HttpPost]
         public IActionResult AddPublisher([FromBody] PublisherVM author)
         {

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using my_book.Data.Paging;
 using my_book.Data.ViewModels;
 using my_book.Exceptions;
 
@@ -27,6 +28,38 @@ namespace my_book.Data.Models.Services
             _appDbcontext.SaveChanges();
 
             return _publisher;
+        }
+
+        public List<Publisher> GetAllPublishers(string sortBy, string searchString, int? pageNumber)
+        {
+            var allPublishers = _appDbcontext.Publishers.OrderBy(x => x.Name).ToList();
+            //Adding Sorting
+            if (!string.IsNullOrEmpty(sortBy))
+            {
+                switch (sortBy)
+                {
+                    case "name_desc":
+                        allPublishers = allPublishers.OrderByDescending(x => x.Name).ToList();
+                        break;
+                    default:
+                        break;
+
+                }
+            }
+
+            //Adding Filtering
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                allPublishers = allPublishers.Where(x => x.Name.Contains(searchString,
+                    StringComparison.CurrentCultureIgnoreCase)).ToList();
+            }
+
+            //Adding Paging
+            int pageSize = 5;
+            allPublishers = PaginatedList<Publisher>.Create(allPublishers.AsQueryable(), pageNumber ?? 1, pageSize);
+
+            return allPublishers;
+
         }
 
         public Publisher GetPublisherById(int id) =>
