@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using my_book.Data.Models;
 using my_book.Data.ViewModels;
 
-namespace my_book.Data.Models.Services
+namespace my_book.Data.Services
 {
     public class BookService
     {

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "2iLS99PZ8FewReQkH6rxsjYcbN5U2iJYtice8ywUaYmGyxuv+AKAeCaEFhz3UbxyjOxFsGX5DGuWLKj6N81ajQ==",
+  "dgSpecHash": "TWyix0is+eVe/UwIa5jiYPtZGeobKvKUyOa59V/+Atl5xVZpk+r4LjA39m2ZDq7ba4ozVSF7xbOwWPkGhbW52A==",
   "success": true,
   "projectFilePath": "/Users/macbook/Desktop/Author/src/repos/my-book/my-book.csproj",
   "expectedPackageFiles": [
     "/Users/macbook/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
+    "/Users/macbook/.nuget/packages/microsoft.aspnetcore.mvc.versioning/5.0.0/microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
     "/Users/macbook/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/macbook/.nuget/packages/microsoft.data.sqlclient/2.0.1/microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "/Users/macbook/.nuget/packages/microsoft.data.sqlclient.sni.runtime/2.0.1/microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

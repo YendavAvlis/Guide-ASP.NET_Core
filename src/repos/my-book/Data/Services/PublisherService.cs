@@ -2,11 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using my_book.Data.Models;
 using my_book.Data.Paging;
 using my_book.Data.ViewModels;
 using my_book.Exceptions;
 
-namespace my_book.Data.Models.Services
+namespace my_book.Data.Services
 {
     public class PublisherService
     {
