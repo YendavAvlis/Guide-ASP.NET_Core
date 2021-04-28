@@ -13,7 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using my_book.Data;
-using my_book.Data.Models.Services;
+using my_book.Data.Services;
 using my_book.Exceptions;
 
 namespace my_book
