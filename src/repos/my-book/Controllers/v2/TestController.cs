@@ -2,11 +2,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace my_book.Controllers.v2
 {
+    [ApiVersion("2.0")]
     [Route("api/[controller]")]
     [ApiController]
     public class TestController : ControllerBase
     {
-        [HttpGet]
+        [HttpGet("get-test-data")]
         public IActionResult Get()
         {
             return Ok("Testing the Web API v2");
